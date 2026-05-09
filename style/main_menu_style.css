@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #F8F6E9, #DDE8DF);
+    color: #2B1A18;
+}
+
+header {
+    background: linear-gradient(90deg, #2B1A18, #8A8A8A);
+    color: #F8F6E9;
+    padding: 40px 20px;
+    text-align: center;
+    animation: fadeDown 1s ease;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 40px;
+}
+
+header p {
+    color: #F04BE1;
+}
+
+nav {
+    text-align: center;
+    padding: 15px;
+}
+
+nav a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: #2B1A18;
+    font-weight: bold;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background-color: #F04BE1;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
+    animation: fadeUp 1s ease;
+}
+
+h2 {
+    margin-top: 30px;
+    position: relative;
+}
+
+h2::after {
+    content: "";
+    width: 50px;
+    height: 3px;
+    background: #B8E51D;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+
+.team {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.team-member {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    position: relative;
+}
+
+.team-member::before {
+    content: "";
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, #B8E51D, #F04BE1);
+}
+
+.team-member:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+button {
+    margin-top: 30px;
+    padding: 12px 25px;
+    border: none;
+    background: linear-gradient(90deg, #B8E51D, #F04BE1);
+    color: #2B1A18;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+    background: #8A8A8A;
+    color: white;
+}
+
+@keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
